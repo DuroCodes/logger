@@ -4,6 +4,7 @@
   "description": "a logger that extends the console",
   "main": "dist/index.js",
   "type": "module",
+  "repository": "https://github.com/durocodes/logger",
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "build": "tsc",
