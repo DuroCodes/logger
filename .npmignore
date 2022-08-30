@@ -1,0 +1,8 @@
+/src/
+/test/
+/images/
+*.tgz
+tsconfig.json
+.eslintignore
+.eslintrc.cjs
+.DS_Store
