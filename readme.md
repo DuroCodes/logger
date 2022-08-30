@@ -17,14 +17,6 @@ const logger = new Logger();
 logger.error('An error occured');
 ```
 
-**CommonJS**
-```ts
-const { Logger } = require('@spark.ts/logger');
-
-const logger = new Logger();
-logger.error('An error occured');
-```
-
 **NOTE:** You can use all of the functions from the regular console, such as `console.log('hello world')` becomes `logger.log('hello world')`
 
 ## **Types**

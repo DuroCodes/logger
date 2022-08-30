@@ -1,6 +1,6 @@
 {
   "name": "@spark.ts/logger",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a logger that extends the console",
   "main": "dist/index.js",
   "type": "module",
