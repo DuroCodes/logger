@@ -4,14 +4,14 @@
 
 ## **Installation**
 
-- To install, run `npm i @spark/logger`.
+- To install, run `npm i @spark.ts/logger`.
 - Usage:
 
 ## **Example Usage**
 
 **TypeScript / ESM**
 ```ts
-import { Logger } from '@spark/logger';
+import { Logger } from '@spark.ts/logger';
 
 const logger = new Logger();
 logger.error('An error occured');
@@ -19,7 +19,7 @@ logger.error('An error occured');
 
 **CommonJS**
 ```ts
-const { Logger } = require('@spark/logger');
+const { Logger } = require('@spark.ts/logger');
 
 const logger = new Logger();
 logger.error('An error occured');

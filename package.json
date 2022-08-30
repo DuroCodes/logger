@@ -1,5 +1,5 @@
 {
-  "name": "@spark/logger",
+  "name": "@spark.ts/logger",
   "version": "1.0.4",
   "description": "a logger that extends the console",
   "main": "dist/index.js",
