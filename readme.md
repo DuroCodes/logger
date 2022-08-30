@@ -33,8 +33,8 @@ logger.error('An error occured');
 
 ```ts
 new Logger({
-  logLevel: 'success' | 'error' | 'warn' | 'debug' | 'info',
-  logStyle: 'highlight' | 'bracket',
+  logLevel: 'success' | 'error' | 'warn' | 'debug' | 'info', // Defaults to 'success'
+  logStyle: 'highlight' | 'bracket', // Defaults to 'highlight'
 });
 ```
 
