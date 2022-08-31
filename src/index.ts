@@ -89,27 +89,27 @@ export class Logger extends console.Console {
     }
   }
 
-  success(firstArg: unknown, ...args: unknown[]) {
-    this.logMessage(format(firstArg, ...args), 'success');
+  success(...args: unknown[]) {
+    this.logMessage(format(...args), 'success');
   }
 
-  override error(firstArg: unknown, ...args: unknown[]) {
-    this.logMessage(format(firstArg, ...args), 'error');
+  override error(...args: unknown[]) {
+    this.logMessage(format(...args), 'error');
   }
 
-  override warn(firstArg: unknown, ...args: unknown[]) {
-    this.logMessage(format(firstArg, ...args), 'warn');
+  override warn(...args: unknown[]) {
+    this.logMessage(format(...args), 'warn');
   }
 
-  override debug(firstArg: unknown, ...args: unknown[]) {
-    this.logMessage(format(firstArg, ...args), 'debug');
+  override debug(...args: unknown[]) {
+    this.logMessage(format(...args), 'debug');
   }
 
-  override info(firstArg: unknown, ...args: unknown[]) {
-    this.logMessage(format(firstArg, ...args), 'info');
+  override info(...args: unknown[]) {
+    this.logMessage(format(...args), 'info');
   }
 
-  override log(firstArg: unknown, ...args: unknown[]) {
-    console.log(format(firstArg, ...args));
+  override log(...args: unknown[]) {
+    console.log(format(...args));
   }
 }
