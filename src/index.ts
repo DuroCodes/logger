@@ -110,6 +110,6 @@ export class Logger extends console.Console {
   }
 
   override log(...args: unknown[]) {
-    console.log(format(...args));
+    this.log(format(...args));
   }
 }

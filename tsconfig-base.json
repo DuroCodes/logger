@@ -1,9 +1,5 @@
 {
-  "exclude": ["dist", "node_modules"],
-  "include": ["src"],
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ESNext",
     "skipLibCheck": true,
     "strict": true,
     "sourceMap": false,
@@ -34,6 +30,8 @@
     "esModuleInterop": true,
     "exactOptionalPropertyTypes": true,
     "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true
   },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"]
 }
