@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import chalk, { ForegroundColor } from 'chalk';
+import colors from 'ansi-colors';
 import { format } from 'util';
 
 export type LogLevel = 'success' | 'error' | 'warn' | 'debug' | 'info';
@@ -14,47 +14,47 @@ type LoggerData = {
   [key in LogLevel]: {
     title: LoggerTitle;
     level: number;
-    color: ForegroundColor;
+    color: keyof typeof colors.styles;
   };
 };
 
 const loggerInfo: LoggerData = {
   success: {
     title: {
-      highlight: chalk.greenBright.inverse.bold(' SUCCESS '),
-      bracket: chalk.greenBright.bold('[SUCCESS]'),
+      highlight: colors.greenBright.inverse.bold(' SUCCESS '),
+      bracket: colors.greenBright.bold('[SUCCESS]'),
     },
     color: 'greenBright',
     level: 5,
   },
   error: {
     title: {
-      highlight: chalk.redBright.inverse.bold(' ERROR '),
-      bracket: chalk.redBright.bold('[ERROR]'),
+      highlight: colors.redBright.inverse.bold(' ERROR '),
+      bracket: colors.redBright.bold('[ERROR]'),
     },
     color: 'redBright',
     level: 4,
   },
   warn: {
     title: {
-      highlight: chalk.yellowBright.inverse.bold(' WARN '),
-      bracket: chalk.yellowBright.bold('[WARN]'),
+      highlight: colors.yellowBright.inverse.bold(' WARN '),
+      bracket: colors.yellowBright.bold('[WARN]'),
     },
     color: 'yellowBright',
     level: 3,
   },
   debug: {
     title: {
-      highlight: chalk.magentaBright.inverse.bold(' DEBUG '),
-      bracket: chalk.magentaBright.bold('[DEBUG]'),
+      highlight: colors.magentaBright.inverse.bold(' DEBUG '),
+      bracket: colors.magentaBright.bold('[DEBUG]'),
     },
     color: 'magentaBright',
     level: 2,
   },
   info: {
     title: {
-      highlight: chalk.cyanBright.inverse.bold(' INFO '),
-      bracket: chalk.cyanBright.bold('[INFO]'),
+      highlight: colors.cyanBright.inverse.bold(' INFO '),
+      bracket: colors.cyanBright.bold('[INFO]'),
     },
     color: 'cyanBright',
     level: 1,
@@ -85,7 +85,7 @@ export class Logger extends console.Console {
   private logMessage(message: string, level: LogLevel) {
     if (this.checkLevel(level)) {
       const { title, color } = loggerInfo[level];
-      console.log(`${title[this.logStyle]} ${chalk[color](message)}`);
+      console.log(`${title[this.logStyle]} ${colors[color](message)}`);
     }
   }
 
