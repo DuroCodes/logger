@@ -108,8 +108,4 @@ export class Logger extends console.Console {
   override info(...args: unknown[]) {
     this.logMessage(format(...args), 'info');
   }
-
-  override log(...args: unknown[]) {
-    this.log(format(...args));
-  }
 }
